@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nlgm</title>
+</head>
+</body>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedida de Matrimonio</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url('https://static.wikia.nocookie.net/rise-of-the-brave-tangled-dragons/images/c/c6/Mavis_Johnny_Wedding.png/revision/latest?cb=20150926133513');
+            background-size: cover; 
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100vh; 
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
+            font-family: 'Arial', sans-serif;
+        }
+
+        #content {
+            max-width: 700px;
+            margin: 60px auto;
+            padding: 30px;
+            border-radius: 20px;
+        }
+
+        h1 {
+            color: #ffffff;
+            text-shadow: #000000b2;
+        }
+
+        p {
+            color: #ffffff;
+            text-shadow: #000000b2;
+        }
+
+        .btn-container {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 30px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #btn-yes {
+            background-color: #27ff2eb2;
+            color: #fff;
+            border: none;
+        }
+
+        #btn-no {
+            background-color: #f44336ab;
+            color: #fff;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="content">
+        <h1>Holaa amor</h1>
+        <p>¿Aceptarías casarte conmigo?</p>
+
+        <div class="btn-container">
+            <button id="btn-yes" onclick="mostrarRespuesta('oficialmente estamos casados <3 ')">Sip</button>
+            <button id="btn-no" onclick="mostrarRespuesta('soy un naco y estupido, vdd')">Nop</button>
+        </div>
+
+        <p id="respuesta" style="display:none; margin-top:30px;"></p>
+    </div>
+
+    <script>
+        function mostrarRespuesta(respuesta) {
+            document.getElementById("respuesta").innerHTML = respuesta;
+            document.getElementById("respuesta").style.display = "block";
+            document.getElementById("btn-yes").disabled = true;
+            document.getElementById("btn-no").disabled = true;
+        }
+    </script>
+</body>
+</html>
